@@ -16,7 +16,6 @@ public class Snake : MonoBehaviour
     Vector2 dir;
 
     public Text points;
-    // Start is called before the first frame update
     void Start()
     {
         timeBetweenMovements = 0.5f;
@@ -93,7 +92,6 @@ public class Snake : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -121,7 +119,7 @@ public class Snake : MonoBehaviour
                 gameOver();
             }
 
-            // check if collides with any tail tile
+            // Check if collides with any tail tile
             foreach (var item in tail)
             {
                 if(item.transform.position == newPosition){
